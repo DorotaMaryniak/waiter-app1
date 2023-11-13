@@ -73,7 +73,7 @@ const tableReducer = (statePart = [], action) => {
     case UPDATE_TABLES:
       return { ...statePart, tables: action.payload};
       case EDIT_TABLE:
-      return  statePart.map(table => table.id===action.payload.id ? {...table,...action.payload} : table);
+      return  statePart.tables.map(table => table.id===action.payload.id ? {...table,...action.payload} : table);
     default:
       return statePart;
   };
