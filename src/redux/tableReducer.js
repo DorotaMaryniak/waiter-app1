@@ -64,7 +64,7 @@ export const editTableRequest = (thisTable) => {
   };
 };
 
-const tablesReducer = (statePart = [], action) => {
+const tableReducer = (statePart = [], action) => {
   switch (action.type) {
     case ADD_TABLE:
       return { ...statePart, tables: [...statePart.tables, { ...action.payload }]};
@@ -79,4 +79,4 @@ const tablesReducer = (statePart = [], action) => {
   };
 };
 
-export default tablesReducer;
+export default tableReducer;
